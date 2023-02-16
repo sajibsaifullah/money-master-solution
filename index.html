@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-8 text-blue-400">Money Master <span class="text-yellow-700">💰</span></h1>
+    </header>
+    <main class="md:mx-12 mt-8">
+        <section class="flex flex-col md:flex-row">
+            <div class="w-full md:w-[60%] mt-4">
+                <img class="mb-4" src="images/money-manage.jpeg" alt="">
+            </div>
+            <div class="bg-slate-300 w-full  md:w-[40%] md:ml-8">
+                <h3 class="text-3xl text-center mt-4">Income</h3>
+                <label class="flex justify-center items-center mt-2 text-2xl" for="">Income:
+                    <input id="income-field" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs ml-4" />
+                </label>
+                <div>
+                    <h3 class="text-3xl text-center mt-4">Expenses</h3>
+                    <div class="flex flex-col items-center">
+                        <label class="flex justify-center items-center mt-2 text-2xl" for="">Food:
+                            <input id="food-field" type="text" placeholder="Type here"
+                                class="input input-bordered w-full max-w-xs ml-6" />
+                        </label>
+                        <label class="flex justify-center items-center mt-2 text-2xl" for="">Rent:
+                            <input id="rent-field" type="text" placeholder="Type here"
+                                class="input input-bordered w-full max-w-xs ml-7" />
+                        </label>
+                        <label class="flex justify-center items-center mt-2 text-2xl" for="">Cloths:
+                            <input id="cloth-field" type="text" placeholder="Type here"
+                                class="input input-bordered w-full max-w-xs ml-3" />
+                        </label>
+                        <button id="btn-calculate" class="btn btn-primary md:w-[20%] mt-2 font-bold">Calculate</button>
+
+                    </div>
+                    <h3 class="text-3xl text-center mt-4 font-semibold">Total Expenses: <span id="total-expenses">00</span></h3>
+                    <h3 class="text-3xl text-center mt-4 font-semibold">Balance: <span id="total-balance">00</span></h3>
+                </div>
+                <div>
+                    <label class="flex justify-center items-center mt-2 text-2xl" for="">Save:
+                        <input id="save-field" type="text" placeholder="Type here"
+                            class="input input-bordered w-[20%] max-w-xs mx-5" /> % 
+                            <button id="btn-save" class="btn btn-primary w-[20%] mt-2 ml-5 font-bold">Save</button>
+                    </label>
+                    <h3 class="text-3xl text-center mt-4 font-semibold">Saving Amount: <span id="saving-amount">00</span></h3>
+                    <h3 class="text-3xl text-center my-4 font-semibold">Remaining Balance: <span id="remaining-balance">00</span></h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
