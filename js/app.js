@@ -13,25 +13,32 @@ function setElement(elementId, value) {
     return totalElementAmount;
 }
 document.getElementById('btn-calculate').addEventListener('click', function () {
+
     // income
     const income = getInputById('income-field');
 
-    
+
     // expenses
     const foodExpense = getInputById('food-field');
     const rentExpense = getInputById('rent-field');
     const clothExpense = getInputById('cloth-field');
     const expenses = foodExpense + rentExpense + clothExpense;
 
-    const setTotalExpenses = setElement('total-expenses', expenses);
-
-    // validation
-    if (income !== 'number' || income < 0 && expenses !== 'number' || expenses < 0) {
-        alert('please input valid data');
+    /* validation */
+    if (isNaN(expenses) == true || rentExpense < 0 || foodExpense < 0 || clothExpense < 0) {
+        getInputById();
     }
+
+    const setTotalExpenses = setElement('total-expenses', expenses);
 
     // balance
     const totalBalance = income - expenses;
+
+    /* validation */
+    if (isNaN(totalBalance) == true || income < 0) {
+        getInputById();
+    }
+
     const setTotalBalanceAmount = setElement('total-balance', totalBalance);
 
     document.getElementById('btn-save').addEventListener('click', function () {
